@@ -19,13 +19,20 @@ namespace Deliverable2_Iteration_Runowski
                 int x = int.Parse(input);
                 //define count variable
                 int count = 1;
-
-                //create loop with conditon that count must be less than or equal to x
-                while(count <= x)
+                //check constraints of user input x
+                if (x > 100 || x < 0)
                 {
-                    //write line for each iteration
-                    Console.WriteLine("You have entered " + x + ". This is the current integer value in the loop: " + count);
-                    count++; //add 1 to count with each iteration
+                    Console.WriteLine("Enter number between 0 and 100");
+                }
+                else
+                {
+                    //create loop with conditon that count must be less than or equal to x
+                    while (count <= x)
+                    {
+                        //write line for each iteration
+                        Console.WriteLine("You have entered " + x + ". This is the current integer value in the loop: " + count);
+                        count++; //add 1 to count with each iteration
+                    }
                 }
             }
             catch
